@@ -14,7 +14,7 @@ dotenv.config();
 // DATABASE CONNECTION
 const dbConnection = async () => {
       try {
-            await mongoose.connect(process.env.DB_URL);
+            await mongoose.connect('mongodb+srv://rental:rental@cluster0.5fqfaem.mongodb.net/rental?retryWrites=true&w=majority');
             console.log("DB Connected +1+")
       } catch (err) {
             console.log(err.message)
